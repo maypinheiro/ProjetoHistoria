@@ -1,0 +1,39 @@
+
+html, body { height: 100%; }
+body { margin: 0; 
+    font-family: Roboto,"Helvetica Neue", sans-serif; 
+    background-image: url(https://humanhand.org/sites/default/files/human-hand-brasil-22_1.jpg);
+}
+
+
+button {
+     width: 200px;
+     height:50px;
+     color: aliceblue;
+     padding: 12px;
+     margin-left: 15px;
+     border-radius: 50px;
+     background-color: #dc3113;
+     border-color: #dc3113;
+     border: 3px;
+     font-size: 15px;
+}
+
+
+img{
+     padding-left: 20px;
+     padding-top: 60px;
+}
+
+
+.mat-dialog-container {
+    max-width: 100%;
+    margin-bottom: 8px;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
