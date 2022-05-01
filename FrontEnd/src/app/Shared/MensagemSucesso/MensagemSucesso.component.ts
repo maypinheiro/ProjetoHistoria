@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-suceso',
-  templateUrl: './suceso.component.html',
-  styleUrls: ['./suceso.component.scss']
+  selector: 'app-MensagemSucesso',
+  templateUrl: './MensagemSucesso.component.html',
+  styleUrls: ['./MensagemSucesso.component.scss']
 })
-export class SucesoComponent implements OnInit {
+export class MensagemSucessoComponent implements OnInit {
   dialogRef: any;
 
   constructor(public dialog: MatDialog,) { }

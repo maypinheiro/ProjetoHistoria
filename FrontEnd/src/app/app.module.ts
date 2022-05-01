@@ -16,7 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 import {MatIconModule} from '@angular/material/icon';
 import { ConexaoService } from './Shared/conexao.service';
-import { SucesoComponent } from './suceso/suceso.component';
+import { MensagemSucessoComponent } from './Shared/MensagemSucesso/MensagemSucesso.component';
 
 
 @NgModule({
@@ -27,8 +27,7 @@ import { SucesoComponent } from './suceso/suceso.component';
     HeaderComponent,
     FooterComponent,
     ModalComponent,
-    SucesoComponent,
-   
+    MensagemSucessoComponent
 
   ],
   imports: [

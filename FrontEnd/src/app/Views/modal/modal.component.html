@@ -2,22 +2,16 @@
 
 <form [formGroup]="formulario" (ngSubmit)="enviar()">
 
-
-
-  
-
-
-
   <mat-form-field appearance="fill">
     <mat-label>Nome</mat-label>
-    <input matInput formControlName="nome" >
+    <input matInput formControlName="nome" required="nome">
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Idade</mat-label>
     <input matInput  #idade maxlength="3" formControlName="idade">
     <mat-hint align="start"> </mat-hint>
-    <mat-hint align="end">{{idade.value.length}} / 3</mat-hint>
+    <mat-hint align="end">{{idade.value.length}} /3</mat-hint>
   </mat-form-field>
 
   <mat-form-field class="example-full-width" appearance="fill">
@@ -25,18 +19,13 @@
     <textarea input matInput #message maxlength="2000" formControlName="relato"> </textarea>
     <mat-hint align="start"> </mat-hint>
     <mat-hint align="end">{{message.value.length}} / 2000</mat-hint>
+    <mat-hint *ngIf="relato?.errors"> Mínimo 20 Caracteres.</mat-hint>
   </mat-form-field>
-
-
- 
-  <!--<input formControlName="imagem" placeholder="Cole o Url da Imagem">-->
 
   <mat-form-field appearance="fill">
     <mat-label>Foto</mat-label>
     <input matInput formControlName="imagem" placeholder="Cole o Url da Imagem">
   </mat-form-field>
-
-
 
   <div mat-dialog-actions>
     <button (click)="cancelar()">Cancelar</button>

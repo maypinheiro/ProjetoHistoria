@@ -3,8 +3,7 @@ import { waitForAsync } from '@angular/core/testing';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ConexaoService } from 'src/app/Shared/conexao.service';
-import { SucesoComponent } from 'src/app/suceso/suceso.component';
-
+import { MensagemSucessoComponent } from 'src/app/Shared/MensagemSucesso/MensagemSucesso.component';
 
 
 @Component({
@@ -25,26 +24,22 @@ export class ModalComponent implements OnInit {
   ngOnInit() {
 
     this.formulario = this.form.group({
-      nome: ([null, [Validators.required,Validators.minLength(3)]]),
-      idade: [null, [Validators.required,Validators.maxLength(3)]],
-      relato: [null, [Validators.required,Validators.maxLength(2000)]],
-      imagem: [null,Validators.required]
+      nome:([null, [Validators.required,Validators.minLength(3),Validators.maxLength(50), Validators.pattern('[a-zA-Z]*')]]),
+      idade:( [null, [Validators.required,Validators.maxLength(3),Validators.pattern('[0-9]*') ]]),
+      relato:( [null, [Validators.required,Validators.minLength(20),Validators.maxLength(2000)]]),
+      imagem:([null,Validators.required])
     });
-
-
-
   }
-
+  
+  get relato(){ return this.formulario.get('relato')}
+  
   enviar() {
-    
-     // console.log(this.formulario.value)
       this.acesso.postPessoa(this.formulario.value).subscribe(
           dados => {
           let retorno = dados; 
           console.log('Cadastrado consucesso')
           this.cancelar();
-          this.openDialog();
-          
+          this.openDialog(); 
      })
     }
 
@@ -53,8 +48,10 @@ export class ModalComponent implements OnInit {
   }
 
   openDialog() {
-  this.dialog.open(SucesoComponent);
+  this.dialog.open(MensagemSucessoComponent);
   }
+
+  
 
 }
 

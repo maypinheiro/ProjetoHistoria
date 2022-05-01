@@ -4,8 +4,11 @@ body { margin: 0;
     font-family: Roboto,"Helvetica Neue", sans-serif; 
     background-image: url(https://humanhand.org/sites/default/files/human-hand-brasil-22_1.jpg);
 }
-
-
+ 
+button:disabled {
+    color: aliceblue;
+    background-color:#a95446
+}
 button {
      width: 200px;
      height:50px;

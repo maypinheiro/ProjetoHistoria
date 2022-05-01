@@ -19,18 +19,14 @@ namespace BackEnd.Data
             var aleatorio = new Random();
             int range = aleatorio.Next(1,registros);
             return _context.Historias.FirstOrDefault(a => a.Id == range);
-
         }
 
         public void CriarHistoria(Historia historia)
         {
             if(historia == null)
                 throw new ArgumentNullException(nameof(historia)); 
-
             _context.Historias.Add(historia);
-
         }
-
         public bool SalvarHistoria()
         {
             return (_context.SaveChanges() >= 0);

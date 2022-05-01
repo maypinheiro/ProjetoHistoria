@@ -1,11 +1,9 @@
-
 using System;
 using AutoMapper;
 using BackEnd.Data;
 using BackEnd.Dtos;
 using Microsoft.AspNetCore.Mvc;
- 
-
+using System.Collections.Generic;
 namespace BackEnd.Controller
 {
 
@@ -15,7 +13,6 @@ namespace BackEnd.Controller
     {
         private readonly IHistoriaRepositorio _repository;
         private readonly IMapper _mapper;
-
 
         public HistoriaController(
             IHistoriaRepositorio repository,
@@ -28,7 +25,6 @@ namespace BackEnd.Controller
         [HttpGet(Name = "BuscarHistoriaRandomica")]
         public ActionResult<LerHistoriaDto> GetHistoria()
         {
-           
             try{
                  var historia = _repository.BuscarHistoriaRandomica();
             return Ok(_mapper.Map<LerHistoriaDto>(historia));
@@ -41,14 +37,11 @@ namespace BackEnd.Controller
         [HttpPost]
         public ActionResult Post(CriarHistoriaDto criaHistoriaDto)
         {
-            
-
              try{
             var historia = _mapper.Map<Model.Historia>(criaHistoriaDto);
             _repository.CriarHistoria(historia);
             _repository.SalvarHistoria();
-            return Ok(historia);
-
+            return Created("","Criado com sucesso");
             }
             catch(Exception ex){
                 return BadRequest(ex.Message);
