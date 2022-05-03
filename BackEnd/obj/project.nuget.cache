@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "67C9Bu8K6SiGZqmGyigXgK3CxVqiyAgbkm2PUIGl2nn8AfqYX45WG2TIo9+olQ14eExjgIoxORyWUiMqYpc7yA==",
+  "dgSpecHash": "ZJIrcQ4kO6F7kUo0au6LkKiyXV3HsDEDQjPc1QCBvOgBBQH/uPO0SZ7lPtn4YghiX9Y4Xw3LnKvLYLHSCoU9MA==",
   "success": true,
-  "projectFilePath": "C:\\ProjetoHistoria\\BackEnd\\BackEnd.csproj",
+  "projectFilePath": "C:\\ProjetoHistoria\\backend\\BackEnd.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LGGRAM\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\LGGRAM\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

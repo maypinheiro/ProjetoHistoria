@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ProjetoHistoria\\BackEnd\\BackEnd.csproj": {}
+    "C:\\ProjetoHistoria\\backend\\BackEnd.csproj": {}
   },
   "projects": {
-    "C:\\ProjetoHistoria\\BackEnd\\BackEnd.csproj": {
+    "C:\\ProjetoHistoria\\backend\\BackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ProjetoHistoria\\BackEnd\\BackEnd.csproj",
+        "projectUniqueName": "C:\\ProjetoHistoria\\backend\\BackEnd.csproj",
         "projectName": "BackEnd",
-        "projectPath": "C:\\ProjetoHistoria\\BackEnd\\BackEnd.csproj",
+        "projectPath": "C:\\ProjetoHistoria\\backend\\BackEnd.csproj",
         "packagesPath": "C:\\Users\\LGGRAM\\.nuget\\packages\\",
-        "outputPath": "C:\\ProjetoHistoria\\BackEnd\\obj\\",
+        "outputPath": "C:\\ProjetoHistoria\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\LGGRAM\\AppData\\Roaming\\NuGet\\NuGet.Config"

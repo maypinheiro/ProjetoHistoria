@@ -41,9 +41,9 @@ namespace BackEnd.Controller
             var historia = _mapper.Map<Model.Historia>(criaHistoriaDto);
             _repository.CriarHistoria(historia);
             _repository.SalvarHistoria();
-            return Created("","Criado com sucesso");
+            return Ok(historia);
             }
-            catch(Exception ex){
+            catch(Exception ex){    
                 return BadRequest(ex.Message);
             }
         }

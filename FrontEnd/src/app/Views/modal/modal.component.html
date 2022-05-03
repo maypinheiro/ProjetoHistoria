@@ -19,7 +19,6 @@
     <textarea input matInput #message maxlength="2000" formControlName="relato"> </textarea>
     <mat-hint align="start"> </mat-hint>
     <mat-hint align="end">{{message.value.length}} / 2000</mat-hint>
-    <mat-hint *ngIf="relato?.errors"> Mínimo 20 Caracteres.</mat-hint>
   </mat-form-field>
 
   <mat-form-field appearance="fill">
